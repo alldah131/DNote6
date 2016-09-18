@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Note {
 
-    public String title, content;
+    public String title, content,temperature;
     public int id;
     public static ArrayList<Note> parse(JSONArray array){
         ArrayList<Note> notes = new ArrayList<>();
@@ -19,6 +19,7 @@ public class Note {
             note.id = object.optInt("id");
             note.title =object.optString("title");
             note.content =object.optString("content");
+            note.temperature=object.optString("temperature");
 
             notes.add(note);
         }

@@ -55,7 +55,6 @@ public class NoteAdapter extends BaseAdapter {
         Note note = getItem(position);
         vh.title.setText(note.title);
         vh.content.setText(note.content);
-
         return convertView;
     }
 
